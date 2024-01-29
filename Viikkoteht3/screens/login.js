@@ -1,16 +1,14 @@
 import React from 'react';
 import { View } from 'react-native';
-import { MainAppbar } from '..mainAppBar';
+import { MainAppbar } from '../components/mainAppBar';
 import { TextInput, Button } from 'react-native-paper';
 
 const Login = () => {
-    // State for form data
     const [formData, setFormData] = React.useState({
         username: '',
         password: '',
     });
 
-    // Function to handle form input changes
     const handleInputChange = (field, value) => {
         setFormData(prevState => ({
             ...prevState,
@@ -18,9 +16,8 @@ const Login = () => {
         }));
     };
 
-    // Function to handle form submission
     const handleSubmit = () => {
-        // Validation and submit logic here
+        // Submitti
     };
 
     return (
