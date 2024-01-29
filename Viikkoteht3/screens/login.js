@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, Alert } from 'react-native';
 import { MainAppbar } from '../components/mainAppBar';
 import { TextInput, Button } from 'react-native-paper';
 
@@ -17,7 +17,13 @@ const Login = () => {
     };
 
     const handleSubmit = () => {
-        // Submitti
+        const { username, password } = formData;
+
+        if (username === 'eelis' && password === 'saana') {
+            Alert.alert('Success', 'Login successful');
+        } else {
+            Alert.alert('Error', 'You don\'t have an account');
+        }
     };
 
     return (
